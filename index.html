@@ -23,5 +23,39 @@
                     <input type="range" id="generations" min="10" max="200" value="50" class="slider">
                 </div>
             </div>
+
+            <div class="config-section">
+                <div>
+                    <label>Tipo de Crossover:</label>
+                    <select id="crossoverType">
+                        <option value="umPonto">Um Ponto</option>
+                        <option value="uniforme">Uniforme</option>
+                        <option value="aritmetico">Aritmético</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Tipo de Mutação:</label>
+                    <select id="mutationType">
+                        <option value="aleatoria">Aleatória</option>
+                        <option value="pequena">Pequena</option>
+                        <option value="dirigida">Dirigida</option>
+                    </select>
+                </div>
+                <div>
+                    <button id="startBtn">Iniciar Evolução</button>
+                    <button id="resetBtn">Reiniciar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="evolutionChart"></canvas>
+        </div>
+
+        <div id="populationContainer" class="population"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
