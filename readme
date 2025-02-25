@@ -1,0 +1,181 @@
+# Evolução de Besouros - Algoritmo Genético
+
+![Demonstração](https://via.placeholder.com/800x400.png?text=Simulação+de+Evolução+de+Besouros)
+
+Uma implementação interativa de algoritmo genético que simula a evolução de besouros para cores mais escuras, com interface web visual e controles dinâmicos.
+
+## 📋 Descrição
+
+Este projeto demonstra na prática o funcionamento de algoritmos genéticos através de uma simulação evolutiva onde besouros competem para se tornarem cada vez mais escuros. A implementação inclui:
+
+- Controles interativos para ajuste de parâmetros
+- Visualização em tempo real da população
+- Gráfico de evolução do fitness
+- Diferentes métodos de crossover e mutação
+
+## ✨ Funcionalidades Principais
+
+- **Interface Interativa**
+  - Sliders para ajuste de população, gerações e taxa de mutação
+  - Seleção de tipos de crossover e mutação
+  - Botões de controle da simulação
+
+- **Visualização em Tempo Real**
+  - Grade de cores representando a população
+  - Gráfico de linhas com métricas de fitness
+  - Tooltips com informações detalhadas
+
+- **Algoritmo Genético Configurável**
+  - 3 métodos de crossover diferentes
+  - 3 tipos de mutação
+  - Seleção por roleta viciada
+  - Sistema de fitness adaptativo
+
+## 🚀 Como Executar
+
+1. **Pré-requisitos**
+   - Navegador moderno (Chrome, Firefox, Edge)
+   - Conexão internet (para carregar o Chart.js)
+
+2. **Instalação**
+   ```bash
+   git clone https://github.com/seu-usuario/evolucao-besouros.git
+   cd evolucao-besouros
+Execução
+
+Abra o arquivo index.html no navegador
+
+Ajuste os parâmetros desejados
+
+Clique em "Iniciar Evolução"
+
+🧠 Funcionamento do Algoritmo
+Estrutura Principal
+javascript
+Copy
+class Besouro {
+  constructor() {
+    this.R = Math.random() * 256
+    this.G = Math.random() * 256
+    this.B = Math.random() * 256
+  }
+  
+  get fitness() {
+    return 765 - (this.R + this.G + this.B)
+  }
+}
+Fluxo Evolutivo
+Inicialização da população aleatória
+
+Calcula fitness para cada indivíduo
+
+Seleção dos pais por roleta viciada
+
+Cruzamento (crossover) dos genes
+
+Aplicação de mutações
+
+Nova geração substitui a anterior
+
+Repete até atingir o número de gerações
+
+Componentes Chave
+Crossover
+
+Um ponto: Divide genes em um ponto aleatório
+
+Uniforme: Combina genes aleatoriamente
+
+Aritmético: Média dos valores dos pais
+
+Mutação
+
+Aleatória: Valor totalmente novo
+
+Pequena: Ajuste ±10 no valor atual
+
+Dirigida: Redução progressiva dos valores RGB
+
+⚙️ Personalização
+Você pode modificar diversos parâmetros no código:
+
+javascript
+Copy
+// script.js
+const config = {
+  populationSize: 50,    // Tamanho da população
+  mutationRate: 0.3,     // Chance de mutação (0-1)
+  maxGenerations: 50,    // Número máximo de gerações
+  simulationSpeed: 100   // Velocidade da simulação (ms)
+}
+📊 Resultados Esperados
+Evolução Progressiva
+
+Melhoria gradual no fitness médio
+
+Besouros ficando mais escuros a cada geração
+
+Redução da variabilidade genética ao final
+
+Gráficos Significativos
+
+Linha verde: Melhor fitness da geração
+
+Linha azul: Média de fitness
+
+Linha vermelha: Pior fitness
+
+📌 Exemplo de Uso
+Configure população para 100 indivíduos
+
+Selecione crossover "Aritmético"
+
+Escolha mutação "Dirigida"
+
+Ajuste taxa de mutação para 0.4
+
+Execute por 100 gerações
+
+Observe a rápida convergência para cores escuras
+
+📚 Recursos Utilizados
+Chart.js para visualização gráfica
+
+HTML5 Canvas para renderização
+
+CSS Grid para layout responsivo
+
+ES6 Classes para organização do código
+
+🌟 Contribuição
+Contribuições são bem-vindas! Siga estes passos:
+
+Faça fork do projeto
+
+Crie uma branch com sua feature
+
+Faça commit das mudanças
+
+Push para a branch
+
+Abra um Pull Request
+
+📄 Licença
+Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para detalhes.
+
+Copy
+
+Este README fornece uma visão completa do projeto, incluindo:
+- Descrição geral do sistema
+- Instruções de instalação e uso
+- Explicação técnica do algoritmo
+- Possibilidades de personalização
+- Guia de contribuição
+- Informações de licença
+
+Você pode personalizar ainda mais adicionando:
+- Screenshots reais da aplicação
+- Vídeo demonstrativo
+- Link para demonstração online
+- Seção de FAQ
+- Log de mudanças
