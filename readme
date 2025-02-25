@@ -39,7 +39,7 @@ Este projeto demonstra na prática o funcionamento de algoritmos genéticos atra
 
 2. **Instalação**
    ```bash
-   git clone https://github.com/seu-usuario/evolucao-besouros.git
+   git clone https://github.com/PauloMatiasxvs/DESAFIO-Algoritmo-Gen-tico
    cd evolucao-besouros
 Execução
 
